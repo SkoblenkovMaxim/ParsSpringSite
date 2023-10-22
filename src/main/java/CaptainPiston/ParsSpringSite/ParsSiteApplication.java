@@ -2,24 +2,20 @@ package CaptainPiston.ParsSpringSite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-//import org.jsoup.Jsoup;
-//import org.jsoup.nodes.Document;
-//import org.jsoup.nodes.Element;
-//import org.jsoup.select.Elements;
-//import java.io.IOException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
-public class ParsSiteApplication<args> {
+public class ParsSiteApplication {
 
-	public static void main(String[] args) /* throws IOException */ {
+	public static void main(String[] args) throws IOException {
 		SpringApplication.run(ParsSiteApplication.class, args);
-//		String url = "https://www.mk.ru/polls/";
-//		Document document = Jsoup.connect(url).get();
-//		Elements voteRight = document.getElementsByClass("right_block vote_right");
-//		for(Element blockVoteRight: voteRight) {
-//			System.out.println(blockVoteRight.text());
-//			Elements href = document.getElementsByTag("<a>");
-//			System.out.println(href.text());
-//		}
+
+		ParSiteData ps = new ParSiteData();
+
+		List<ParSiteData> listPS = new ArrayList();
+		listPS.add(new ParSiteData(ps.question));
+		System.out.println(listPS);
 	}
 }
