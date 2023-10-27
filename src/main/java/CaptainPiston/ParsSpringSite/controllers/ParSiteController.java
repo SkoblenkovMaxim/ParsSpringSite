@@ -9,5 +9,4 @@ public class ParSiteController {
     public String home() {
         return "polls";
     }
-
 }
