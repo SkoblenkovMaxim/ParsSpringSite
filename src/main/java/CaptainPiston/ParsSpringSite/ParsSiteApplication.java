@@ -2,6 +2,7 @@ package CaptainPiston.ParsSpringSite;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,12 +20,14 @@ public class ParsSiteApplication {
 		Document document = Jsoup.connect(url).get();
 		Elements voteRight = document.getElementsByClass("right_block vote_right");
 
-		ParSiteData psquestion = new ParSiteData();
-		List<String> listPS = new ArrayList();
+		for(Element divVoteRight: voteRight) {
+			ParSiteData psquestion = new ParSiteData();
+			List<String> listPS = new ArrayList();
 
-		String question = voteRight.select("a[href]").text();
-		psquestion.setHeader(question);
-		listPS.add(psquestion.getHeader());
-		System.out.println(listPS);
+			String question = divVoteRight.select("a[href]").text();
+			psquestion.setHeader(question);
+			listPS.add(psquestion.getHeader());
+			System.out.println(listPS);
+		}
 	}
 }
