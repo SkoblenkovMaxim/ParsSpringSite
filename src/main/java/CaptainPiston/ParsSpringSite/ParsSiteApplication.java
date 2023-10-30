@@ -19,15 +19,13 @@ public class ParsSiteApplication {
 		String url = "https://www.mk.ru/polls/";
 		Document document = Jsoup.connect(url).get();
 		Elements voteRight = document.getElementsByClass("right_block vote_right");
-
+		List<String> listPS = new ArrayList();
 		for(Element divVoteRight: voteRight) {
 			ParSiteData psquestion = new ParSiteData();
-			List<String> listPS = new ArrayList();
-
 			String question = divVoteRight.select("a[href]").text();
 			psquestion.setHeader(question);
 			listPS.add(psquestion.getHeader());
-			System.out.println(listPS);
 		}
+		System.out.println(listPS);
 	}
 }
