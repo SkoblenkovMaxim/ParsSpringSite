@@ -1,6 +1,6 @@
 package CaptainPiston.ParsSpringSite;
 
-public class ParSiteData {
+public class Poll {
     private String header;
 
     public void setHeader(String header) {
@@ -9,5 +9,4 @@ public class ParSiteData {
     public String getHeader() {
         return header;
     }
-
 }

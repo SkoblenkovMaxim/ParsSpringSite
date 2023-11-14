@@ -13,12 +13,8 @@ public class ParSiteController {
     public ParSiteController(ParSiteService parSiteService) {
         this.parSiteService = parSiteService;
     }
-    @Override
-    public String toString() {
-        return " " + parSiteService;
-    }
     @GetMapping("/")
     public String home() {
-        return parSiteService.serviceHome();
+        return parSiteService.pss();
     }
 }
