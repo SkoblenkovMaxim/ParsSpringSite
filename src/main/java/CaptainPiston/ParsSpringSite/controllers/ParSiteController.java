@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+
 @Component
 @RestController
 public class ParSiteController {
@@ -14,7 +16,7 @@ public class ParSiteController {
         this.parSiteService = parSiteService;
     }
     @GetMapping("/")
-    public String home() {
-        return parSiteService.pss();
+    public String controller() throws IOException {
+        return parSiteService.getPolls();
     }
 }
