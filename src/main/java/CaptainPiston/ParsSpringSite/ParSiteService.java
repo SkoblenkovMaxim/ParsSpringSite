@@ -13,12 +13,10 @@ import java.util.List;
 
 @Service
 public class ParSiteService {
-    public ParSiteService() {
-    }
     @Value("${url}")
     String url;
 
-    public String getPolls() throws IOException {
+    public List<Poll> getPolls() throws IOException {
         Document document = Jsoup.connect(url).get();
         Elements voteRight = document.getElementsByClass("right_block vote_right");
         List<Poll> listPS = new ArrayList();
@@ -28,10 +26,10 @@ public class ParSiteService {
             psquestion.setHeader(question);
             listPS.add(psquestion);
         }
-        for(Poll s: listPS) {
-            s.getHeader();
-        }
-        return "null";
+//        for(Poll s: listPS) {
+//            s.getHeader();
+//        }
+        return listPS;
     }
 
 //    private MkService mkService;
