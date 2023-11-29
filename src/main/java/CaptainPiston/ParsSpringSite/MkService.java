@@ -7,15 +7,11 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-//@Service
+@Service
 public class MkService {
-//    public MkService() throws IOException {
-//    }
-//    @Value("${url}")
-//    String url;
-//    Document document = Jsoup.connect(url).get();
-
-//    public String getDocument() {
-//
-//    }
+    public MkService() throws IOException {
+    }
+    @Value("${url}")
+    String url;
+    Document document = Jsoup.connect(url).get();
 }
