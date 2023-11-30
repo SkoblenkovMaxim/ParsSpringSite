@@ -9,9 +9,14 @@ import java.io.IOException;
 
 @Service
 public class MkService {
-    public MkService() throws IOException {
+    public MkService() {
     }
+
     @Value("${url}")
     String url;
-    Document document = Jsoup.connect(url).get();
+
+    public Document getDocument() throws IOException {
+        Document document = Jsoup.connect(url).get();
+        return document;
+    }
 }

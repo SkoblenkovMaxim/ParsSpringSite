@@ -3,6 +3,8 @@ package CaptainPiston.ParsSpringSite;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +20,9 @@ public class ParSiteService {
 //    public List<Poll> getPolls() {
 //        return mkService.getDocument();
 //    }
-    public List<Poll> getPolls() {
+    public List<Poll> getPolls() throws IOException {
 //        Document document = Jsoup.connect(url).get();
-        Elements voteRight = mkService.document.getElementsByClass("right_block vote_right");
+        Elements voteRight = mkService.getDocument().getElementsByClass("right_block vote_right");
         List<Poll> listPS = new ArrayList();
         for(Element divVoteRight: voteRight) {
             Poll psquestion = new Poll();
