@@ -1,4 +1,4 @@
-package CaptainPiston.ParsSpringSite;
+package captainpiston.parsing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

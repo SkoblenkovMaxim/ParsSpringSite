@@ -8,8 +8,8 @@
 		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>CaptainPiston</groupId>
-	<artifactId>ParsSpringSite</artifactId>
+	<groupId>captainpiston</groupId>
+	<artifactId>parsing</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ParsSite</name>
 	<description>Demo project for Spring Boot</description>

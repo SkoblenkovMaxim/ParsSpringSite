@@ -1,7 +1,7 @@
-package CaptainPiston.ParsSpringSite.controllers;
+package captainpiston.parsing.controllers;
 
-import CaptainPiston.ParsSpringSite.ParSiteService;
-import CaptainPiston.ParsSpringSite.Poll;
+import captainpiston.parsing.ParSiteService;
+import captainpiston.parsing.Poll;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

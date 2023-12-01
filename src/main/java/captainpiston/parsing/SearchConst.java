@@ -1,4 +1,4 @@
-package CaptainPiston.ParsSpringSite;
+package captainpiston.parsing;
 
 public enum SearchConst {
     MK(0, "komsomol"),
