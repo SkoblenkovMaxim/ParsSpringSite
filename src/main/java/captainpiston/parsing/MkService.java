@@ -1,4 +1,4 @@
-package CaptainPiston.ParsSpringSite;
+package captainpiston.parsing;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
